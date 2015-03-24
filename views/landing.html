@@ -1,37 +1,24 @@
 
-<div class="page-wrapper">
+<div class="page-wrapper" ng-controller="LandingCtrl">
 
-    <div ng-include="'app/partials/bottom-bar.html'"></div>
+  <div ng-include="'app/partials/bottom-bar.html'"></div>
 
   <div class="main-view-container">
     <div class="container-fluid">
       <div class="row">
 
-        <div class="side-btn left col-lg-1  "></div>
-
-        <div class="card col-lg-8 col-lg-offset-1">
-            <span class="top small">"When is easter this year"</span>
-            <p id="date"></p>
-
-            <script>
-                document.getElementById("date").innerHTML = moment().format('dddd, MMM D, YYYY');
-            </script>
-        </div>
-
-        <div class="side-btn right col-lg-1 col-lg-offset-1"></div>
-
+        <div ui-view class="ui-view-slider"></div>
+        
       </div>
-        <div class="row">
-            <div class="more-btn col-lg-8 col-lg-offset-2">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle-o fa-stack-2x"></i>
-                  <i class="fa fa-microphone fa-stack-1x"></i>
-                </span>
-                <span class="more-txt"> Say "more" for more info</span>
-            </div>
+      <div class="row">
+        <div class="more-btn col-lg-8 col-lg-offset-2">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle-o fa-stack-2x"></i>
+            <i class="fa fa-microphone fa-stack-1x"></i>
+          </span>
+          <span class="more-txt" ng-click="loadNextCategory()">Say "more" for more info</span>
         </div>
+      </div>
     </div>
   </div>
-
-
 </div>

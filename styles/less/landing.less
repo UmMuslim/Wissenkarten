@@ -2,28 +2,32 @@
   font-family: xfinity;
   src: url(/font/xfinity.otf);
 }
-body{
 
+body {
   background-image: url(/img/bg.png);
   background-repeat: no-repeat;
   background-size: 100% ;
   font-family: xfinity;
-
 }
 
 .bottom-bar {
-  display: none;
-  content: '';
   position: absolute;
-  bottom: 0px;
+  bottom: -100%;
   width: 100%;
   height: 30%;
   background-color: black;
   box-shadow: 0 0 165px 140px rgba(0, 0, 0, 1);
-  opacity: 0.9;
+  opacity: 0.8;
 
+  transition: bottom 3s ease;
+  transition-delay: 0s;
+
+  &.show {
+    bottom: 0px;
+  }
 }
-.card{
+
+.card {
   background-color: rosybrown;
   height: 180px;
   margin-top: 400px;
@@ -31,18 +35,15 @@ body{
   text-align: center;
   //font-family: monospace;
   font-size: xx-large;
-
 }
-.side-btn{
+
+.side-btn {
   background-color: red;
   height: 180px;
   margin-top: 400px;
-
-
-
 }
 
-.more-btn{
+.more-btn {
   background-color: gold;
   margin-top: 5px;
   margin-bottom: 15px;

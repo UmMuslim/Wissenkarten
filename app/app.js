@@ -1,10 +1,9 @@
+'use strict';
 
 // Create App
-angular.module('WissenkartenApp', ['ui.router','ui.bootstrap']);
+window.angular.module('WissenkartenApp', ['ui.router','ui.bootstrap', 'ngAnimate']);
 
-// Get App
-var app = angular.module('WissenkartenApp');
-app.run(['$rootScope', function($rootScope) {
-	
 
-}]);
+window.angular.module('WissenkartenApp').run(function($rootScope) {
+	$rootScope.loadBottomBar = true;
+});

@@ -5,20 +5,27 @@
 body {
   background-image: url(/img/bg.png);
   background-repeat: no-repeat;
-  background-size: 100% ;
+  background-size: 100%;
   font-family: xfinity;
 }
+
 .bottom-bar {
-  display: none;
-  content: '';
   position: absolute;
-  bottom: 0px;
+  bottom: -100%;
   width: 100%;
   height: 30%;
   background-color: black;
-  box-shadow: 0 0 165px 140px #000000;
-  opacity: 0.9;
+  box-shadow: 0 0 165px 140px rgba(0, 0, 0, 1);
+  opacity: 0.8;
+
+  transition: bottom 3s ease;
+  transition-delay: 0s;
 }
+
+.bottom-bar.show {
+  bottom: 0px;
+}
+
 .card {
   background-color: rosybrown;
   height: 180px;
