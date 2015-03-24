@@ -1,7 +1,12 @@
+@font-face {
+  font-family: xfinity;
+  src: url(/font/xfinity.otf);
+}
 body {
   background-image: url(/img/bg.png);
   background-repeat: no-repeat;
   background-size: 100% ;
+  font-family: xfinity;
 }
 .bottom-bar {
   display: none;
@@ -15,23 +20,24 @@ body {
   opacity: 0.9;
 }
 .card {
+  background-color: rosybrown;
   height: 180px;
   margin-top: 400px;
   color: #ffffff;
   text-align: center;
-  font-family: monospace;
   font-size: xx-large;
 }
 .side-btn {
+  background-color: red;
   height: 180px;
   margin-top: 400px;
 }
 .more-btn {
+  background-color: gold;
   margin-top: 5px;
   margin-bottom: 15px;
   height: 54px;
   color: #30a1dd;
   text-align: center;
-  font-family: monospace;
   font-size: xx-large;
 }
