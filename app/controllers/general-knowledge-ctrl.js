@@ -1,6 +1,6 @@
 'use strict';
 
-window.angular.module('WissenkartenApp').controller('GeneralKnowledgeCtrl', function($scope, $state) {
+window.angular.module('BznsPlansApp').controller('GeneralKnowledgeCtrl', function($scope, $state) {
 	
 	var cards = ['holiday', 'president', 'question'];
 	var currentCardIndex = 0;

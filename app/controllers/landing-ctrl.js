@@ -1,6 +1,6 @@
 'use strict';
 
-window.angular.module('WissenkartenApp').controller('LandingCtrl', function($scope, $state) {
+window.angular.module('BznsPlansApp').controller('LandingCtrl', function($scope, $state) {
 	
 	var categories = ['general-knowledge.holiday', 'sports', 'stocks', 'weather'];
 	var currentCategoryIndex = 0;

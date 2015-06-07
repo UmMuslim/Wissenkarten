@@ -49,3 +49,7 @@ Temporary Items
 .idea/workspace.xml
 .idea/modules.xml
 .idea/watcherTasks.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/jsLinters/jslint.xml
+.idea/jsLinters/jshint.xml

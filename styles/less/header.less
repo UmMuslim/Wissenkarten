@@ -1,0 +1,155 @@
+@import "theme";
+@import "mixins";
+
+@navbar-height: 60px;
+
+#nav li a:focus, #nav li a:hover {
+  color: @white!important;
+}
+
+#nav li a:focus {
+  background-color: @bg-blue;
+}
+
+.header-row {
+  position: relative;
+}
+
+.username-area {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 285px;
+  height: 50px;
+  padding-right: 15px;
+
+  .separator {
+    background-color: rgb(73, 73, 73);
+    width: 1px;
+    height: @navbar-height - 20px;
+    margin-top: 10px;
+    float: right;
+  }
+
+  .fa {
+    color: @white;
+    float: right;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-top: @navbar-height / 3;
+    .clickable;
+
+    &:hover {
+      color: @bg-light-gray;
+    }
+
+    &.fa-caret-square-o-down {
+      font-size: 22px;
+    }
+  }
+
+  .profile-pic {
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid @white;
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+
+  .username {
+    margin-left: 10px;
+    margin-top: @navbar-height / 3;
+    float: right;
+    color: @white;
+  }
+}
+
+.responsive-nav {
+  &.navbar {
+    background-color: @bg-darker-gray;
+    min-height: @navbar-height;
+    border-radius: 0;
+    border: none;
+    margin-bottom: 0;
+    z-index: 2000;
+
+    .navbar-toggle {
+      color: @bg-light-gray;
+      background-color: @bg-gray;
+      border-radius: 0;
+      width: 45px;
+      height: 43px;
+      margin-top: 8px;
+      margin-left: -15px;
+      font-size: 20px;
+      padding: 2px;
+
+
+      &:hover {
+        background-color: lighten(@bg-gray, 3);
+      }
+    }
+
+    .navbar-header {
+      .navbar-brand {
+        padding-left: 3px;
+        padding-top: 18px;
+      }
+
+      .logo-large {
+        width: 200px;
+        height: @navbar-height;
+        margin-top: -15px;
+        background-image: url(/img/header-logo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        float: left;
+      }
+
+      .logo-mini {
+        .logo-large;
+        width: 60px;
+        height: 55px;
+        background-image: url(/img/logo.png);
+      }
+    }
+
+    .navbar-collapse {
+      border: none;
+    }
+
+    li {
+      a {
+        display: block;
+        width: 100%;
+        height: @navbar-height;
+        color: @white;
+        text-decoration: none;
+        padding-top: 20px;
+        .clickable;
+
+        &:hover {
+          text-decoration: none;
+          background-color: lighten(@bg-darker-gray, 7);
+          color: @bg-blue;
+        }
+      }
+
+      &.active {
+        a {
+          background-color: @bg-blue;
+          border-bottom: 3px solid @bg-dark-blue;
+          color: @white;
+          .clickable;
+
+          &:hover {
+            background-color: lighten(@bg-blue, 7);
+            color: @white;
+          }
+        }
+      }
+    }
+  }
+}
